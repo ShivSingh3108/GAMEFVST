@@ -5,13 +5,13 @@ var speed =100.0
 var direction = -1
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var window_size = Vector2(200,200)
-@onready var animated_sprite = $enemy
-@onready var hitbox = $hitbox
+@onready var animated_sprite = $smishing
+@onready var hitbox = $hitbox2
 
 
 func _ready():
 	animated_sprite.play("Walk_Right")
-	hitbox.body_entered.connect(_on_hitbox_body_entered)
+	hitbox.body_entered.connect(_on_hitbox_2_body_entered)
 	
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -22,7 +22,7 @@ func _physics_process(delta: float) -> void:
 			direction *=-1
 			animated_sprite.flip_h=direction<0
 
-func _on_hitbox_body_entered(body: Node2D) -> void:
+func _on_hitbox_2_body_entered(body: Node2D) -> void:
 	if body.name=="Firewall":
 		print("hit") 
 		body.take_damage(3)		

@@ -1,0 +1,445 @@
+[gd_scene format=3 uid="uid://dveioq0o7mnby"]
+
+[ext_resource type="Script" uid="uid://ch2vsoiubdxxr" path="res://script/trojan.gd" id="1_1o600"]
+[ext_resource type="Texture2D" uid="uid://cdmv4e11bdyy5" path="res://assets/desk.webp" id="1_3fihy"]
+[ext_resource type="Texture2D" uid="uid://7phmdt48jesm" path="res://assets/idlejump2.png" id="3_gihmt"]
+[ext_resource type="Texture2D" uid="uid://memw83ryc1aj" path="res://assets/1000051543.png" id="4_1o600"]
+[ext_resource type="Script" uid="uid://b6l6w05dm72j8" path="res://script/firewall2.gd" id="5_1o600"]
+[ext_resource type="Script" uid="uid://c14ds5yp76kum" path="res://script/horse.gd" id="5_gihmt"]
+[ext_resource type="Texture2D" uid="uid://baokb7f3vuwgy" path="res://assets/asset.png" id="6_1o600"]
+[ext_resource type="Texture2D" uid="uid://c0vtu363t5dqo" path="res://assets/trore.png" id="8_fx7kl"]
+[ext_resource type="Texture2D" uid="uid://c6k0oid8o4ujc" path="res://assets/black.png" id="8_qps5k"]
+[ext_resource type="Texture2D" uid="uid://dex7k7heujhai" path="res://assets/winn.png" id="10_wwnfu"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1vivr"]
+atlas = ExtResource("1_3fihy")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ssrho"]
+atlas = ExtResource("3_gihmt")
+region = Rect2(615, 320, 205, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1o600"]
+atlas = ExtResource("3_gihmt")
+region = Rect2(828, 654, 276, 218)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0kl5f"]
+atlas = ExtResource("3_gihmt")
+region = Rect2(828, 657, 276, 219)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3e4dd"]
+atlas = ExtResource("3_gihmt")
+region = Rect2(0, 320, 205, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4exgq"]
+atlas = ExtResource("3_gihmt")
+region = Rect2(410, 320, 205, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_echmr"]
+atlas = ExtResource("4_1o600")
+region = Rect2(0, 320, 206, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d0lcc"]
+atlas = ExtResource("4_1o600")
+region = Rect2(206, 320, 206, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_drxq6"]
+atlas = ExtResource("4_1o600")
+region = Rect2(412, 320, 206, 320)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_p60mh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ssrho")
+}, {
+"duration": 0.7,
+"texture": SubResource("AtlasTexture_1o600")
+}, {
+"duration": 1.5,
+"texture": SubResource("AtlasTexture_0kl5f")
+}],
+"loop": 2,
+"name": &"attack",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3e4dd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4exgq")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_echmr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d0lcc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_drxq6")
+}],
+"loop": 1,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0kl5f"]
+size = Vector2(46.375, 47.25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p60mh"]
+atlas = ExtResource("6_1o600")
+region = Rect2(0, 2388, 2480, 796)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1vivr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p60mh")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_auskg"]
+size = Vector2(21, 28)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ujbgx"]
+size = Vector2(37.75, 10)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1o600"]
+bg_color = Color(0.6, 0.6, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p60mh"]
+bg_color = Color(0.6, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0i7xd"]
+bg_color = Color(0.87058824, 0.72156864, 0.2627451, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.3372549, 0.2901961, 0.12941177, 1)
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_color = Color(0.3372549, 0.28627452, 0.12941177, 1)
+shadow_size = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x2426"]
+bg_color = Color(0.3372549, 0.2901961, 0.12941177, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.87058824, 0.72156864, 0.2627451, 1)
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_color = Color(0.3372549, 0.2901961, 0.12941177, 1)
+shadow_size = 6
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qbdty"]
+atlas = ExtResource("10_wwnfu")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d2pp6"]
+size = Vector2(49, 27.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_arpge"]
+size = Vector2(88, 9)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8vrlf"]
+size = Vector2(149.5, 53)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v5gy4"]
+size = Vector2(36, 749)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1vivr"]
+size = Vector2(1221, 33)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qbdty"]
+size = Vector2(32, 754)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v5gy4"]
+atlas = ExtResource("8_fx7kl")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xvkdd"]
+bg_color = Color(0.019607844, 0, 0, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.8, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_color = Color(1, 0, 0, 0.5372549)
+shadow_size = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mo80x"]
+bg_color = Color(1, 0, 0, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+shadow_size = 6
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8vrlf"]
+atlas = ExtResource("8_qps5k")
+
+[node name="Trojan" type="Area2D" unique_id=1606036281]
+script = ExtResource("1_1o600")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=687775890]
+position = Vector2(567, 326)
+texture = SubResource("AtlasTexture_1vivr")
+
+[node name="Firewall" type="CharacterBody2D" parent="." unique_id=2069878238]
+position = Vector2(27, 556)
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("5_1o600")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Firewall" unique_id=516582740]
+position = Vector2(3.6262221, 38.99999)
+scale = Vector2(0.46218336, 0.43124998)
+sprite_frames = SubResource("SpriteFrames_p60mh")
+animation = &"attack"
+frame_progress = 0.23311423
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Firewall" unique_id=959786037]
+z_index = -5
+position = Vector2(2.8125, 33.625)
+shape = SubResource("RectangleShape2D_0kl5f")
+
+[node name="Camera2D" type="Camera2D" parent="Firewall" unique_id=315100707]
+position = Vector2(9, -23)
+
+[node name="horse" type="CharacterBody2D" parent="." unique_id=2106720521]
+position = Vector2(1019, 567)
+script = ExtResource("5_gihmt")
+
+[node name="horsy" type="AnimatedSprite2D" parent="horse" unique_id=1013932080]
+position = Vector2(10, -4)
+scale = Vector2(0.2219758, 0.15797731)
+sprite_frames = SubResource("SpriteFrames_1vivr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="horse" unique_id=295902231]
+position = Vector2(99, -3)
+shape = SubResource("RectangleShape2D_auskg")
+
+[node name="box" type="CollisionShape2D" parent="horse" unique_id=143565203]
+position = Vector2(-99, 0)
+shape = SubResource("RectangleShape2D_ujbgx")
+
+[node name="stun" type="Timer" parent="horse" unique_id=1850334922]
+wait_time = 3.0
+autostart = true
+
+[node name="hpbar" type="ProgressBar" parent="horse" unique_id=1344507496]
+offset_left = 4.0
+offset_top = -71.0
+offset_right = 69.0
+offset_bottom = -61.0
+theme_override_colors/font_color = Color(0.9490196, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 1, 1)
+theme_override_styles/background = SubResource("StyleBoxFlat_1o600")
+theme_override_styles/fill = SubResource("StyleBoxFlat_p60mh")
+max_value = 10.0
+value = 10.0
+show_percentage = false
+
+[node name="Label" type="Label" parent="horse" unique_id=766490016]
+visible = false
+offset_left = -73.0
+offset_top = -123.0
+offset_right = 140.0
+offset_bottom = -74.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+text = "STUNNED. 
+USE J TO ATTACK"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_trim_flags = 128
+
+[node name="win" type="CanvasLayer" parent="horse" unique_id=241088718]
+visible = false
+
+[node name="Button" type="Button" parent="horse/win" unique_id=355533387]
+z_index = 8
+offset_left = 471.0
+offset_top = 487.0
+offset_right = 756.0
+offset_bottom = 570.0
+theme_override_colors/font_color = Color(0.3372549, 0.28627452, 0.12941177, 1)
+theme_override_colors/font_focus_color = Color(0.87058824, 0.72156864, 0.2627451, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.87058824, 0.72156864, 0.25882354, 1)
+theme_override_colors/font_outline_color = Color(0.3372549, 0.28627452, 0.12941177, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 41
+theme_override_styles/normal = SubResource("StyleBoxFlat_0i7xd")
+theme_override_styles/hover = SubResource("StyleBoxFlat_x2426")
+text = "PLAY AGAIN"
+
+[node name="Sprite2D" type="Sprite2D" parent="horse/win" unique_id=390889027]
+position = Vector2(577, 331)
+scale = Vector2(0.28466797, 0.16357419)
+texture = SubResource("AtlasTexture_qbdty")
+
+[node name="Label" type="Label" parent="horse/win/Sprite2D" unique_id=1496771901]
+offset_left = -1731.8423
+offset_top = -1418.3167
+offset_right = -213.84229
+offset_bottom = -736.31665
+theme_override_colors/font_color = Color(0.9988653, 0.78811944, 1.1166334e-05, 1)
+theme_override_colors/font_shadow_color = Color(1, 1, 1, 0.5529412)
+theme_override_colors/font_outline_color = Color(0.26189858, 0.17720723, 4.813075e-08, 1)
+theme_override_constants/shadow_offset_x = 31
+theme_override_constants/shadow_offset_y = 16
+theme_override_constants/outline_size = 100
+theme_override_constants/shadow_outline_size = 12
+theme_override_font_sizes/font_size = 500
+text = "U WIN"
+
+[node name="Label2" type="Label" parent="horse/win/Sprite2D" unique_id=598476043]
+offset_left = -1380.5558
+offset_top = -806.97327
+offset_right = -603.5558
+offset_bottom = -669.97327
+theme_override_colors/font_color = Color(1, 0.7882353, 0, 1)
+theme_override_colors/font_outline_color = Color(0.26189858, 0.17720723, 4.813075e-08, 1)
+theme_override_constants/outline_size = 50
+theme_override_font_sizes/font_size = 100
+text = "u calmed Trojan"
+
+[node name="hitbox2" type="Area2D" parent="horse" unique_id=2016575353]
+position = Vector2(1, 1)
+scale = Vector2(0.99999994, 1)
+collision_mask = 2
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="horse/hitbox2" unique_id=136341962]
+position = Vector2(-22.999992, -45)
+shape = SubResource("RectangleShape2D_d2pp6")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="horse/hitbox2" unique_id=419256611]
+position = Vector2(-80.99999, -1)
+shape = SubResource("RectangleShape2D_arpge")
+one_way_collision_direction = Vector2(0, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="horse/hitbox2" unique_id=51143927]
+position = Vector2(13.000004, -4)
+shape = SubResource("RectangleShape2D_8vrlf")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=2059650115]
+position = Vector2(685, 643)
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=200018191]
+position = Vector2(-735, -278.5)
+shape = SubResource("RectangleShape2D_v5gy4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=834380212]
+z_index = 1
+position = Vector2(-112.5, -5.5)
+shape = SubResource("RectangleShape2D_1vivr")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=420982692]
+position = Vector2(494, -304)
+shape = SubResource("RectangleShape2D_qbdty")
+
+[node name="hud" type="CanvasLayer" parent="." unique_id=1147856896]
+
+[node name="health" type="Label" parent="hud" unique_id=1405970302]
+anchors_preset = -1
+offset_left = 23.0
+offset_top = 13.0
+offset_right = 255.0
+offset_bottom = 81.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(1, 0, 0, 0.7019608)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = 11
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 4
+theme_override_constants/shadow_outline_size = 6
+theme_override_font_sizes/font_size = 54
+text = "ooo"
+
+[node name="restart" type="CanvasLayer" parent="." unique_id=1810519638]
+visible = false
+
+[node name="Sprite2D" type="Sprite2D" parent="restart" unique_id=31669095]
+z_index = 7
+position = Vector2(563.50006, 335.50003)
+scale = Vector2(0.29077148, 0.16967775)
+texture = SubResource("AtlasTexture_v5gy4")
+
+[node name="Label" type="Label" parent="restart/Sprite2D" unique_id=211124517]
+texture_filter = 1
+offset_left = -1272.3676
+offset_top = -78.67128
+offset_right = 1120.5416
+offset_bottom = 467.32874
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(1, 0, 0, 0.68235296)
+theme_override_colors/font_outline_color = Color(1, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 10
+theme_override_constants/shadow_offset_y = 44
+theme_override_constants/outline_size = 10
+theme_override_constants/shadow_outline_size = 11
+theme_override_font_sizes/font_size = 400
+text = "GAME OVER"
+
+[node name="Label2" type="Label" parent="restart/Sprite2D" unique_id=1667218468]
+offset_left = -232.6899
+offset_top = 454.26553
+offset_right = 113.86931
+offset_bottom = 591.2655
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 5
+theme_override_constants/shadow_offset_y = 5
+theme_override_constants/outline_size = 12
+theme_override_constants/shadow_outline_size = 5
+theme_override_font_sizes/font_size = 100
+text = "U DIED"
+
+[node name="resb" type="Button" parent="restart" unique_id=259029427]
+z_index = 8
+offset_left = 480.0
+offset_top = 446.0
+offset_right = 614.0
+offset_bottom = 505.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0.9490196, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_xvkdd")
+theme_override_styles/hover = SubResource("StyleBoxFlat_mo80x")
+text = "Restart"
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=259958427]
+z_index = -4
+position = Vector2(548.00006, 398.50003)
+scale = Vector2(19.895832, 12.244792)
+texture = SubResource("AtlasTexture_8vrlf")
+
+[connection signal="pressed" from="horse/win/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="restart/resb" to="." method="_on_resb_pressed"]

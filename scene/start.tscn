@@ -1,0 +1,84 @@
+[gd_scene format=3 uid="uid://cvqycgqmx2qft"]
+
+[ext_resource type="Script" uid="uid://bq5u02ic5tgem" path="res://script/start.gd" id="1_xmel7"]
+[ext_resource type="Texture2D" uid="uid://c6k0oid8o4ujc" path="res://assets/black.png" id="2_bhewb"]
+[ext_resource type="Texture2D" uid="uid://cbydr5eiv06m" path="res://assets/fvtstart.png" id="3_bnuxd"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1vivr"]
+atlas = ExtResource("2_bhewb")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1svla"]
+atlas = ExtResource("3_bnuxd")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1vivr"]
+bg_color = Color(0.87058824, 0.72156864, 0.2627451, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.3372549, 0.2901961, 0.12941177, 1)
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_color = Color(0.3372549, 0.28627452, 0.12941177, 1)
+shadow_size = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8vrlf"]
+bg_color = Color(0.3372549, 0.2901961, 0.12941177, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.87058824, 0.72156864, 0.2627451, 1)
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_color = Color(0.3372549, 0.2901961, 0.12941177, 1)
+shadow_size = 6
+
+[node name="Node2D" type="Control" unique_id=247922150]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_xmel7")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=768671383]
+position = Vector2(443.49994, 216.5)
+scale = Vector2(9.807292, 8.036459)
+texture = SubResource("AtlasTexture_1vivr")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2028028713]
+position = Vector2(582.75, 326.25)
+scale = Vector2(0.19055176, 0.15979005)
+texture = SubResource("AtlasTexture_1svla")
+
+[node name="Button" type="Button" parent="." unique_id=310654131]
+layout_mode = 0
+offset_left = 471.0
+offset_top = 487.0
+offset_right = 673.0
+offset_bottom = 570.0
+theme_override_colors/font_color = Color(0.3372549, 0.28627452, 0.12941177, 1)
+theme_override_colors/font_focus_color = Color(0.87058824, 0.72156864, 0.2627451, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.87058824, 0.72156864, 0.25882354, 1)
+theme_override_colors/font_outline_color = Color(0.3372549, 0.28627452, 0.12941177, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 41
+theme_override_styles/normal = SubResource("StyleBoxFlat_1vivr")
+theme_override_styles/hover = SubResource("StyleBoxFlat_8vrlf")
+text = "START"
+
+[node name="Label" type="Label" parent="." unique_id=666196102]
+layout_mode = 0
+offset_left = 886.0
+offset_top = 622.0
+offset_right = 971.0
+offset_bottom = 648.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 19
+text = "-BY SHIV"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
