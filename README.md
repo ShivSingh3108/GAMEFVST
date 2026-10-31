@@ -32,7 +32,7 @@ It is a web based game which Runs on itch.io
 1. Open https://shivsingh3108.itch.io/firewallvstrojan
 * <- : Left
 * -> :Right
-* Spacebar  :Jump
+* Spacebar :Jump
 ​* E : interact
 * J :Fight
 
