@@ -33,7 +33,7 @@ It is a web based game which Runs on itch.io
 * <- : Left
 * -> :Right
 * Spacebar :Jump
-​* E : interact
+* E : interact
 * J :Fight
 
 ## Author
