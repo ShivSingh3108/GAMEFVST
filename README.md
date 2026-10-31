@@ -10,14 +10,14 @@ the game has 3 Scenes:
 * 2nd Scene - Mario like 2D platformer.
 * 3rd Scene - Boss fight: Dodge the ramping enemy.
 ### Minigames
-The game has 2 minigames:
+The game has 2 minigames
 ### UI Screens
 The game has 4 UI Screens:
 * Start screen .
 * 2 Dead/Restart Screen .
 * Win/play again screen.
 ### Assets
-The game has custom Assets:
+The game has custom Assets
 
 ## About 
 A game where Firewall is having hard time handling Trojan(pet of malware).Firewall navigates through obstacle and calms the trojan.
@@ -30,7 +30,11 @@ Its still not perfect , I will be adding more features in future.
 ## How To Run
 It is a web based game which Runs on itch.io
 1. Open https://shivsingh3108.itch.io/firewallvstrojan
-
+* <- : Left
+* -> :Right
+* Spacebar  :Jump
+​* E : interact
+* J :Fight
 
 ## Author
 
