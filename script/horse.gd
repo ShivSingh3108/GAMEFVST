@@ -1,7 +1,7 @@
 
 extends CharacterBody2D
 
-var speed =200.0
+var speed =300.0
 var direction = -1
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var window_size = Vector2(200,200)
@@ -29,7 +29,7 @@ func _physics_process(delta: float) -> void:
 		stun_timer -= delta
 		if stun_timer <= 0:
 			is_stun = false
-			speed = 200
+			speed = 300
 			hitbox.monitoring=true
 			$Label.hide()
 			animated_sprite.modulate=Color.DARK_RED
