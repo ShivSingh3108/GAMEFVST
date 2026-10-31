@@ -12,12 +12,12 @@ the game has 3 Scenes:
 ### Minigames
 The game has 2 minigames:
 ### UI Screens
-Th game has 4 UI Screens:
+The game has 4 UI Screens:
 * Start screen .
 * 2 Dead/Restart Screen .
 * Win/play again screen.
 ### Assets
-Th game has custom Assets:
+The game has custom Assets:
 
 ## About 
 A game where Firewall is having hard time handling Trojan(pet of malware).Firewall navigates through obstacle and calms the trojan.
